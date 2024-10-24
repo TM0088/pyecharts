@@ -91,7 +91,7 @@ class Boxplot(RectChart):
                     n = i * (len(d) + 1) / 4
                     k = int(n)
                     m = n - k
-                    if m == 0:
+                    if m == 0 or len(d)<=k:
                         res.append(d[k - 1])
                     elif m == 1 / 4:
                         res.append(d[k - 1] * 0.75 + d[k] * 0.25)
